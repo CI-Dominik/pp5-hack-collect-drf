@@ -82,6 +82,12 @@ INSTALLED_APPS = [
     'corsheaders',
 ]
 
+# Site ID setup
+
+SITE_ID = 1
+
+# Middleware setup
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -92,7 +98,11 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+# Root URL configuration
+
 ROOT_URLCONF = 'hackcollect.urls'
+
+# Templates
 
 TEMPLATES = [
     {
