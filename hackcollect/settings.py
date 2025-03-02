@@ -58,6 +58,8 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 ALLOWED_HOSTS = [
     '127.0.0.1',
     'localhost',
+    os.environ.get("ALLOWED_HOST"),
+    os.environ.get("ALLOWED_HOST_DEV"),
 ]
 
 # Application definition
