@@ -1,6 +1,7 @@
 from pathlib import Path
 from dotenv import load_dotenv
 import os
+import cloudinary
 import dj_database_url
 
 # Load environmental variables
@@ -12,6 +13,19 @@ load_dotenv()
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = os.environ.get("DEBUG")
+
+# Cloudinary setup
+
+CLOUDINARY_STORAGE = {
+    'CLOUDINARY_URL': os.environ.get('CLOUDINARY_URL')
+}
+
+cloudinary.config(
+    secure=True
+)
+
+MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Allowed Hosts for access
 
