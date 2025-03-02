@@ -38,6 +38,7 @@ REST_USE_JWT = True
 JWT_AUTH_SECURE = True
 JWT_AUTH_COOKIE = os.environ.get("JWT_COOKIE")
 JWT_AUTH_REFRESH_COOKIE = os.environ.get("JWT_COOKIE_REFRESH")
+JWT_AUTH_SAMESITE = 'None'
 
 # Cloudinary setup
 
@@ -97,6 +98,18 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# CORS setup
+
+if 'CLIENT_ORIGIN' in os.environ:
+    # If set, allow CORS requests from the specified origin
+    CORS_ALLOWED_ORIGINS = [
+        os.environ.get('CLIENT_ORIGIN')
+    ]
+
+# Allow credentials to be sent in CORS requests
+
+CORS_ALLOW_CREDENTIALS = True
 
 # Root URL configuration
 
