@@ -87,6 +87,7 @@ INSTALLED_APPS = [
     'profiles',
     'hacks',
     'comments',
+    'ratings',
 ]
 
 # Site ID setup

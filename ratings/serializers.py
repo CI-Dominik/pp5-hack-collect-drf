@@ -1,5 +1,4 @@
 from rest_framework import serializers
-from django.db import IntegrityError
 from .models import Rating
 
 
@@ -10,7 +9,7 @@ class RatingSerializer(serializers.ModelSerializer):
         model = Rating
         fields = [
             'id',
-            'user',
+            'owner',
             'hack',
             'rating',
             'created_at',
@@ -19,6 +18,13 @@ class RatingSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         try:
+            rating = Rating.objects.get(
+                owner=self.context['request'].user,
+                hack=validated_data['hack']
+                )
+            rating.rating = validated_data['rating']
+            rating.save()
+            return rating
+        except Rating.DoesNotExist:
+            validated_data['owner'] = self.context['request'].user
             return super().create(validated_data)
-        except IntegrityError:
-            raise serializers.ValidationError({'detail': 'Possible duplicate'})

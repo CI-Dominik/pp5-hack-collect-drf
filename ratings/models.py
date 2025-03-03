@@ -19,7 +19,7 @@ class Rating(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        unique_together = ('user', 'hack')
+        unique_together = ('owner', 'hack')
 
     def __str__(self):
         return f"{self.user.username} gave {self.hack.title} {self.rating}"
