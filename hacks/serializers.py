@@ -46,4 +46,5 @@ class HackSerializer(serializers.ModelSerializer):
             'title',
             'content',
             'image',
+            'category',
         ]

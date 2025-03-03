@@ -13,7 +13,12 @@ class Hack(models.Model):
         upload_to='images/',
         blank=False
     )
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category = models.ForeignKey(
+        Category,
+        on_delete=models.SET_NULL,
+        null=True,
+        default=Category.objects.first()
+    )
 
     class Meta:
         ordering = ['-created_at']
