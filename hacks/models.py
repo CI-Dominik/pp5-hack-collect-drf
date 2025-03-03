@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from categories.models import Category
 
 
 class Hack(models.Model):
@@ -12,6 +13,7 @@ class Hack(models.Model):
         upload_to='images/',
         blank=False
     )
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
 
     class Meta:
         ordering = ['-created_at']
