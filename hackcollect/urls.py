@@ -16,4 +16,5 @@ urlpatterns = [
 
     path('', include('profiles.urls')),
     path('', include('hacks.urls')),
+    path('', include('comments.urls')),
 ]
