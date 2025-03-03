@@ -18,4 +18,5 @@ urlpatterns = [
     path('', include('hacks.urls')),
     path('', include('comments.urls')),
     path('', include('ratings.urls')),
+    path('', include('followers.urls')),
 ]
