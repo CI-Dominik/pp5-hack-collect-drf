@@ -85,6 +85,7 @@ INSTALLED_APPS = [
     'corsheaders',
 
     'profiles',
+    'hacks',
 ]
 
 # Site ID setup
