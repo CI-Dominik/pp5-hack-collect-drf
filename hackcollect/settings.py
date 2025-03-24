@@ -114,7 +114,8 @@ MIDDLEWARE = [
 if 'CLIENT_ORIGIN' in os.environ:
     # If set, allow CORS requests from the specified origin
     CORS_ALLOWED_ORIGINS = [
-        os.environ.get('CLIENT_ORIGIN')
+        os.environ.get('CLIENT_ORIGIN'),
+        os.environ.get('CLIENT_ORIGIN_DEV')
     ]
 
 # Allow credentials to be sent in CORS requests
