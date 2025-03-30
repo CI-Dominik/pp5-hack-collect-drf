@@ -24,9 +24,6 @@ REST_FRAMEWORK = {
         'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10,
     'DATETIME_FORMAT': '%d %b %Y',
-    'DEFAULT_RENDERER_CLASSES': [
-        'rest_framework.renderers.JSONRenderer' if 'DEV' not in os.environ else 'rest_framework.renderers.BrowsableAPIRenderer', # noqa
-    ]
 }
 
 # When not in development mode, use JSONRenderer as default
