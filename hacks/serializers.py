@@ -7,6 +7,7 @@ class HackSerializer(serializers.ModelSerializer):
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
+    average_rating = serializers.FloatField(read_only=True)
 
     # Validate image size and dimensions
 
@@ -47,4 +48,5 @@ class HackSerializer(serializers.ModelSerializer):
             'content',
             'image',
             'category',
+            'average_rating',
         ]
