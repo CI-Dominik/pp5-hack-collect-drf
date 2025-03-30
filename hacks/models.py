@@ -16,7 +16,7 @@ class Hack(models.Model):
     category = models.ForeignKey(
         Category,
         on_delete=models.SET_DEFAULT,
-        null=False,
+        null=True,
         default=None
     )
 
