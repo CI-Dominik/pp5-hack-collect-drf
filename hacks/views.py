@@ -19,4 +19,6 @@ class HackList(generics.ListCreateAPIView):
 class HackDetail(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = HackSerializer
     permission_classes = [IsOwnerOrReadOnly]
-    queryset = Hack.objects.all().order_by('-created_at')
+    queryset = Hack.objects.all().annotate(
+        average_rating=Avg('rating__rating')
+    ).order_by('-created_at')
