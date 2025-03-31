@@ -1,4 +1,4 @@
-from rest_framework import generics, permissions
+from rest_framework import generics, permissions, filters
 from hackcollect.permissions import IsOwnerOrReadOnly
 from .models import Hack
 from django.db.models import Avg
@@ -16,6 +16,7 @@ class HackList(generics.ListCreateAPIView):
             )
     ).order_by('-created_at')
 
+    filter_backends = [filters.SearchFilter, filters.OrderingFilter]
     search_fields = [
         'owner__username',
         'title',
