@@ -16,6 +16,15 @@ class HackList(generics.ListCreateAPIView):
             )
     ).order_by('-created_at')
 
+    search_fields = [
+        'owner__username',
+        'title',
+    ]
+
+    ordering_fields = [
+        'average_rating',
+    ]
+
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
 
