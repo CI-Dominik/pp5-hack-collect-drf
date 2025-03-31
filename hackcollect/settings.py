@@ -43,7 +43,7 @@ JWT_AUTH_SAMESITE = 'None'
 # Custom User Serializer
 
 REST_AUTH_SERIALIZERS = {
-    'USER_DETAILS_SERIALIZER': 'drf_api.serializers.CurrentUserSerializer'
+    'USER_DETAILS_SERIALIZER': 'hackcollect.serializers.CurrentUserSerializer'
 }
 
 # Cloudinary setup
