@@ -40,6 +40,12 @@ JWT_AUTH_COOKIE = os.environ.get("JWT_COOKIE")
 JWT_AUTH_REFRESH_COOKIE = os.environ.get("JWT_COOKIE_REFRESH")
 JWT_AUTH_SAMESITE = 'None'
 
+# Custom User Serializer
+
+REST_AUTH_SERIALIZERS = {
+    'USER_DETAILS_SERIALIZER': 'drf_api.serializers.CurrentUserSerializer'
+}
+
 # Cloudinary setup
 
 CLOUDINARY_STORAGE = {
