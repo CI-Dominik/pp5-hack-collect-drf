@@ -4,6 +4,7 @@ from hackcollect.permissions import IsOwnerOrReadOnly
 from .models import Rating
 from django_filters.rest_framework import DjangoFilterBackend
 from .serializers import RatingSerializer
+from rest_framework.exceptions import PermissionDenied
 
 
 class RatingListCreateView(generics.ListCreateAPIView):
@@ -16,12 +17,12 @@ class RatingListCreateView(generics.ListCreateAPIView):
     def perform_create(self, serializer):
         hack = serializer.validated_data['hack']
         if hack.owner == self.request.user:
-            raise PermissionError("You cannot rate your own Hack!")
+            raise PermissionDenied("You cannot rate your own Hack!")
 
         if self.request.user.is_authenticated:
             serializer.save(owner=self.request.user)
         else:
-            raise PermissionError("Only registered users can vote!")
+            raise PermissionDenied("Only registered users can vote!")
 
 
 class RatingRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
