@@ -11,7 +11,7 @@ class RatingListCreateView(generics.ListCreateAPIView):
     serializer_class = RatingSerializer
     permission_classes = [IsAuthenticatedOrReadOnly]
     filter_backends = [DjangoFilterBackend]
-    filterset_fields = ['hack']
+    filterset_fields = ['hack', 'owner']
 
     def perform_create(self, serializer):
         if self.request.user.is_authenticated:
