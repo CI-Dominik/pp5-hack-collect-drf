@@ -17,7 +17,7 @@ class RatingListCreateView(generics.ListCreateAPIView):
         if self.request.user.is_authenticated:
             hack = serializer.validated_data.get('hack')
 
-            if hack.owner == self.request.user:
+            if hack.owner == self.request.username:
                 raise PermissionError("You cannot vote on your own Hack!")
 
             serializer.save(owner=self.request.user)
