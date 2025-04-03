@@ -15,9 +15,15 @@ class RatingListCreateView(generics.ListCreateAPIView):
 
     def perform_create(self, serializer):
         if self.request.user.is_authenticated:
+            hack_id = serializer.validated_data.get('hack').id
+            hack_owner = Rating.objects.get(id=hack_id).owner
+
+            if hack_owner == self.request.user:
+                raise PermissionError("You cannot vote on your own Hack!")
+
             serializer.save(owner=self.request.user)
         else:
-            raise PermissionError("Only registered users can leave a rating!")
+            raise PermissionError("Only registered users can vote!")
 
 
 class RatingRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
