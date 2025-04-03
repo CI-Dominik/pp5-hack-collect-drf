@@ -14,6 +14,10 @@ class RatingListCreateView(generics.ListCreateAPIView):
     filterset_fields = ['hack', 'owner']
 
     def perform_create(self, serializer):
+        hack = serializer.validated_data['hack']
+        if hack.owner == self.request.user:
+            raise PermissionError("You cannot rate your own Hack!")
+
         if self.request.user.is_authenticated:
             serializer.save(owner=self.request.user)
         else:
