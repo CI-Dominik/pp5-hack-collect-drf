@@ -49,4 +49,5 @@ class HackSerializer(serializers.ModelSerializer):
             'image',
             'category',
             'average_rating',
+            'comments_count',
         ]
