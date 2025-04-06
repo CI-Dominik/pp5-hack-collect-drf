@@ -18,6 +18,9 @@ class HackList(generics.ListCreateAPIView):
     ).order_by('-created_at')
 
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
+    filterset_fields = [
+        'rating__owner__id',
+    ]
     search_fields = [
         'owner__username',
         'title',
