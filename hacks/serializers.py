@@ -6,6 +6,7 @@ from ratings.models import Rating
 class HackSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
+    rating_id = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
     average_rating = serializers.FloatField(read_only=True)
@@ -35,7 +36,7 @@ class HackSerializer(serializers.ModelSerializer):
     def get_is_owner(self, obj):
         request = self.context['request']
         return request.user == obj.owner
-    
+
     def get_rating_id(self, obj):
         user = self.context['request'].user
         if user.is_authenticated:
