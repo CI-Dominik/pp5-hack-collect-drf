@@ -12,7 +12,7 @@ class HackList(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Hack.objects.all().annotate(
         average_rating=Coalesce(
-            Avg('rating__rating'), 0, output_field=FloatField()
+            Avg('ratings__rating'), 0, output_field=FloatField()
             ),
         comments_count=Count('comments', distinct=True)
     ).order_by('-created_at')
