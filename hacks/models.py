@@ -17,7 +17,6 @@ class Hack(models.Model):
         Category,
         on_delete=models.SET_DEFAULT,
         null=False,
-        default=None
     )
 
     class Meta:
