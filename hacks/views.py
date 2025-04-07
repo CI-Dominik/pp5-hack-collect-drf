@@ -2,6 +2,7 @@ from rest_framework import generics, permissions, filters
 from hackcollect.permissions import IsOwnerOrReadOnly
 from .models import Hack
 from django.db.models import Avg, Count
+from django_filters.rest_framework import DjangoFilterBackend
 from django.db.models.functions import Coalesce
 from .serializers import HackSerializer
 from django.db.models import FloatField
@@ -17,7 +18,7 @@ class HackList(generics.ListCreateAPIView):
         comments_count=Count('comments', distinct=True)
     ).order_by('-created_at')
 
-    filter_backends = [filters.SearchFilter, filters.OrderingFilter]
+    filter_backends = [filters.SearchFilter, filters.OrderingFilter, DjangoFilterBackend]
     filterset_fields = [
         'ratings__owner__profile',
     ]
