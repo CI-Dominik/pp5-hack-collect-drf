@@ -121,7 +121,7 @@ if 'CLIENT_ORIGIN' in os.environ:
     # If set, allow CORS requests from the specified origin
     CORS_ALLOWED_ORIGINS = [
         os.environ.get('CLIENT_ORIGIN'),
-        os.environ.get('CLIENT_ORIGIN_DEV')
+        'http://localhost:3000',
     ]
 
 # Allow credentials to be sent in CORS requests
@@ -154,9 +154,17 @@ WSGI_APPLICATION = 'hackcollect.wsgi.application'
 
 # Database setup
 
-DATABASES = {
-    'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-}
+if os.environ.get("DEV") == "1":
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+else:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    }
 
 # Password validation
 
