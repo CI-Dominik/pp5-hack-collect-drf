@@ -19,7 +19,7 @@ class HackList(generics.ListCreateAPIView):
 
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = [
-        'owner__rating__owner__profile__profile_id',
+        'owner__rating__owner',
     ]
     search_fields = [
         'owner__username',
