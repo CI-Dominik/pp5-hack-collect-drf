@@ -5,7 +5,11 @@ from hacks.models import Hack
 
 class Rating(models.Model):
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
-    hack = models.ForeignKey(Hack, on_delete=models.CASCADE)
+    hack = models.ForeignKey(
+        Hack,
+        related_name='ratings',
+        on_delete=models.CASCADE
+        )
     rating = models.IntegerField(
         choices=[
             (1, '1 Star'),
