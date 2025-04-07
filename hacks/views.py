@@ -18,7 +18,11 @@ class HackList(generics.ListCreateAPIView):
         comments_count=Count('comments', distinct=True)
     ).order_by('-created_at')
 
-    filter_backends = [filters.SearchFilter, filters.OrderingFilter, DjangoFilterBackend]
+    filter_backends = [
+        filters.SearchFilter,
+        filters.OrderingFilter,
+        DjangoFilterBackend
+        ]
     filterset_fields = [
         'ratings__owner__profile',
     ]
