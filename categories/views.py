@@ -1,6 +1,7 @@
-from rest_framework import generics
+from rest_framework import generics, status
 from rest_framework.permissions import IsAdminUser
 from rest_framework.permissions import BasePermission, SAFE_METHODS
+from rest_framework.response import Response
 from .models import Category
 from .serializers import CategorySerializer
 
@@ -26,3 +27,11 @@ class CategoryRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     serializer_class = CategorySerializer
     lookup_field = 'pk'
     permission_classes = [IsAdminUser]
+
+    def destroy(self, request, *args, **kwargs):
+        if Category.objects.count() <= 1:
+            return Response(
+                {"detail": "Cannot delete the last remaining category."},
+                status=status.HTTP_400_BAD_REQUEST
+            )
+        return super().destroy(request, *args, **kwargs)
