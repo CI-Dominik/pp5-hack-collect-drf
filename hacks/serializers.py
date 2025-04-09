@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import Hack
 from ratings.models import Rating
+from categories.serializers import CategorySerializer
 
 
 class HackSerializer(serializers.ModelSerializer):
@@ -11,6 +12,7 @@ class HackSerializer(serializers.ModelSerializer):
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
     average_rating = serializers.FloatField(read_only=True)
     comments_count = serializers.IntegerField(read_only=True)
+    category = CategorySerializer(read_only=True)
 
     # Validate image size and dimensions
 
