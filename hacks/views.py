@@ -25,7 +25,8 @@ class HackList(generics.ListCreateAPIView):
         ]
     filterset_fields = [
         'ratings__owner__profile',
-        'category__name'
+        'category__name',
+        'owner_profile'
     ]
     search_fields = [
         'owner__username',
@@ -34,7 +35,8 @@ class HackList(generics.ListCreateAPIView):
 
     ordering_fields = [
         'average_rating',
-        'category'
+        'category',
+        'comments_count',
     ]
 
     def perform_create(self, serializer):
