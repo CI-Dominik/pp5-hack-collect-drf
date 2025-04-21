@@ -8,7 +8,7 @@ class Hack(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     title = models.CharField(max_length=100)
-    content = models.TextField(blank=False)
+    content = models.TextField(blank=False, max_length=255)
     image = models.ImageField(
         upload_to='images/',
         blank=False
