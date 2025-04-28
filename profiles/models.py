@@ -11,7 +11,7 @@ class Profile(models.Model):
     updated_at = models.DateTimeField(auto_now=True)
     image = models.ImageField(
         upload_to='images/',
-        default='../default_profile_picture_tfoiel.webp',
+        default='../default_profile_picture_z8bo5q.webp',
         blank=True
     )
 
