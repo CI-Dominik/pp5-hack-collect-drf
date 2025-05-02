@@ -60,8 +60,165 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 
 ## API ENDPOINTS
 
-## ENDPOINT
+### `/`
+
+**Methods**:
+  * GET
+
+**Implementation**:
 * PLACEHOLDER
+
+<br>
+
+### `/categories/`
+
+**Methods**:
+  * GET
+
+**Implementation**:
+* PLACEHOLDER
+
+<br>
+
+### `/categories/id/`
+
+**Methods**:
+  * GET
+
+**Implementation**:
+* PLACEHOLDER
+
+<br>
+
+### `/comments/`
+
+**Methods**:
+  * GET
+
+**Implementation**:
+* PLACEHOLDER
+
+<br>
+
+### `/comments/id/`
+
+**Methods**:
+  * GET
+
+**Implementation**:
+* PLACEHOLDER
+
+<br>
+
+### `/followers/`
+
+**Methods**:
+  * GET
+
+**Implementation**:
+* PLACEHOLDER
+
+<br>
+
+### `/followers/id/`
+
+**Methods**:
+  * GET
+
+**Implementation**:
+* PLACEHOLDER
+
+<br>
+
+### `/hacks/`
+
+**Methods**:
+  * GET
+
+**Implementation**:
+* PLACEHOLDER
+
+<br>
+
+### `/hacks/id/`
+
+**Methods**:
+  * GET
+
+**Implementation**:
+* PLACEHOLDER
+
+<br>
+
+### `/profiles/`
+
+**Methods**:
+  * GET
+
+**Implementation**:
+* PLACEHOLDER
+
+<br>
+
+### `/profiles/id/`
+
+**Methods**:
+  * GET
+
+**Implementation**:
+* PLACEHOLDER
+
+<br>
+
+### `/ratings/`
+
+**Methods**:
+  * GET
+
+**Implementation**:
+* PLACEHOLDER
+
+<br>
+
+### `/ratings/id/`
+
+**Methods**:
+  * GET
+
+**Implementation**:
+* PLACEHOLDER
+
+<br>
+
+### `/dj-rest-auth/login/`
+
+**Methods**:
+  * POST
+
+**Implementation**:
+* PLACEHOLDER
+
+<br>
+
+### `/dj-rest-auth/logout/`
+
+**Methods**:
+  * POST
+
+**Implementation**:
+* PLACEHOLDER
+
+<br>
+
+### `/dj-rest-auth/registration/`
+
+**Methods**:
+  * POST
+
+**Implementation**:
+* PLACEHOLDER
+
+<br>
 
 ---
 
