@@ -254,6 +254,33 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 ## TESTING
 * All endpoints were tested for their correct JSON response. In-depth testing can be viewed in the [frontend's testing file](https://github.com/CI-Dominik/pp5-hack-collect/blob/main/TESTING.md).
 
+## Flake8 testing
+* Every folder was checked using the Flake8 checker. Only files that were automatically created via `python makemigrations` or not altered by me (admin.py, tests.py) threw errors. Those do not impact the usability of the API in any way and were just too long lines or unused imports.
+
+### Categories
+
+![Image of the checked folder](docs/flake8/categories.jpg)
+
+### Comments
+
+![Image of the checked folder](docs/flake8/comments.jpg)
+
+### Followers
+
+![Image of the checked folder](docs/flake8/followers.jpg)
+
+### Hacks
+
+![Image of the checked folder](docs/flake8/hacks.jpg)
+
+### Profiles
+
+![Image of the checked folder](docs/flake8/profiles.jpg)
+
+### Ratings
+
+![Image of the checked folder](docs/flake8/ratings.jpg)
+
 ---
 
 ## DEPLOYMENT
