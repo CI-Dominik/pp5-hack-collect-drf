@@ -48,7 +48,7 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 ---
 
 ## AGILE PLANING
-* Here, a list of Epics and User Stories is displayed. A full list of the implemented features can be found in the [frontend's readme file](https://github.com/CI-Dominik/pp5-hack-collect/blob/main/README.md)
+* Here, a list of Epics the backend was part of is displayed. A full list of the implemented features can be found in the [frontend's readme file](https://github.com/CI-Dominik/pp5-hack-collect/blob/main/README.md)
 
 ## Epics
 * Authentication System
