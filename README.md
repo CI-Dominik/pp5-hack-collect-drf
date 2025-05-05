@@ -1,6 +1,6 @@
 # Hack Collect API
-* This is the API of Hack Collect. A React app used to post and rate Life Hacks. The live link for the API can be found here: [Hack Collect API](https://pp5-hack-collect-drf-f277d220324f.herokuapp.com/)
-<br>
+This is the API of Hack Collect. A React app used to post and rate Life Hacks. The live link for the API can be found here: [Hack Collect API](https://pp5-hack-collect-drf-f277d220324f.herokuapp.com/)
+
 The GitHub repository for the frontend can be found here: [Hack Collect React App](https://github.com/CI-Dominik/pp5-hack-collect)
 
 ## **TABLE OF CONTENTS**
