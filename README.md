@@ -42,12 +42,12 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 
 ---
 
-## DEVELOPMENT GOAL
+## **DEVELOPMENT GOAL**
 * The goal of the Hack Collect API is to provide all kinds of information for the frontend. With this, people can login, logout, use hacks, comments, follows and profiles to view, update and delete their data.
 
 ---
 
-## AGILE PLANING
+## **AGILE PLANING**
 * Here, a list of Epics the backend was part of is displayed. A full list of the implemented features can be found in the [frontend's readme file](https://github.com/CI-Dominik/pp5-hack-collect/blob/main/README.md)
 
 ## Epics
@@ -60,7 +60,7 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 
 ---
 
-## API ENDPOINTS
+## **API ENDPOINTS**
 
 ### `/`
 
@@ -244,14 +244,14 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 
 ---
 
-## DATABASE
+## **DATABASE**
 
 ## Database structure
 ![Image of the database structure](docs/database.jpg)
 
 ---
 
-## TECHNOLOGIES
+## **TECHNOLOGIES**
 
 ### Python
 * Python was used as a programming language for editing backend code.
@@ -273,7 +273,7 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 
 ---
 
-## TESTING
+## **TESTING**
 * All endpoints were tested for their correct JSON response. In-depth testing can be viewed in the [frontend's testing file](https://github.com/CI-Dominik/pp5-hack-collect/blob/main/TESTING.md).
 
 ## Flake8 testing
@@ -305,13 +305,63 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 
 ---
 
-## DEPLOYMENT
+## **DEPLOYMENT**
 
 ## GitHub
-* xxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+### Visual Studio Code connection
+* To deploy the code to GitHub, I used Visual Studio Code to connect to my GitHub account.
+
+**Important**: Due to the accidental login with my secondary account in the bash console, DominikW89 was used for all VS Code deployments. Once I noticed this, I did not want to change it to avoid confusion.
+
+<br>
+
+![Screenshot of GitHub deployment](docs/deployment/vs-code.jpg)
+
+### Commit and Push to GitHub
+* Once the change was made, I pushed the code to GitHub via the VS Code menu. A message needs to be entered for each deployment.
+
+![Screenshot of GitHub deployment](docs/deployment/vs-code-deployment.jpg)
 
 ## Heroku
-* xxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+### Create a new project
+* On the dashboard, select the menu to create a new Heroku project.
+
+<br>
+
+![Screenshot of Heroku deployment](docs/deployment/heroku/01_new.jpg)
+
+### Naming and region
+* Give the app a proper name and select the region the application will be hosted in. For me, I chose Europe.
+
+![Screenshot of Heroku deployment](docs/deployment/heroku/02_naming.jpg)
+
+<br>
+
+### Config Vars
+* To keep your information private, head to the settings page and scroll down to config vars. Here, you can enter important and private information like the database url, the secret key and more.
+
+![Screenshot of Heroku deployment](docs/deployment/heroku/03_config.jpg)
+
+<br>
+
+### GitHub connection
+* Once your config vars are setup, click on the deploy page. There, you need to connect your current GitHub project to your Heroku account. Enter the name and link it.
+
+![Screenshot of Heroku deployment](docs/deployment/heroku/04_github.jpg)
+
+### Deployment
+* When everything is connected successfully, click on deploy to deploy your selected GitHub branch.
+
+![Screenshot of Heroku deployment](docs/deployment/heroku/05_deploy.jpg)
+
+<br>
+
+### Successful deployment
+* When everything worked correctly, a success message will be displayed and a link to the hosted app will appear.
+
+![Screenshot of Heroku deployment](docs/deployment/heroku/06_success.jpg)
 
 ---
 
