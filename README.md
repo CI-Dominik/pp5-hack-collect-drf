@@ -43,7 +43,7 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 ---
 
 ## DEVELOPMENT GOAL
-* PLACEHOLDER
+* The goal of the Hack Collect API is to provide all kinds of information for the frontend. With this, people can login, logout, use hacks, comments, follows and profiles to view, update and delete their data.
 
 ---
 
@@ -51,10 +51,12 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 * Here, a list of Epics and User Stories is displayed. A full list of the implemented features can be found in the [frontend's readme file](https://github.com/CI-Dominik/pp5-hack-collect/blob/main/README.md)
 
 ## Epics
-* PLACEHOLDER
-
-## User Stories
-* PLACEHOLDER
+* Authentication System
+* Hacks
+* Single Hack Page
+* Profile
+* Followers
+* Rated Content
 
 ---
 
@@ -66,7 +68,7 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
   * GET
 
 **Implementation**:
-* PLACEHOLDER
+* Used to access the starting page.
 
 <br>
 
@@ -74,9 +76,10 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 
 **Methods**:
   * GET
+  * POST
 
 **Implementation**:
-* PLACEHOLDER
+* Used to get all categories. Only admins can use POST.
 
 <br>
 
@@ -84,9 +87,12 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 
 **Methods**:
   * GET
+  * PUT
+  * PATCH
+  * DELETE
 
 **Implementation**:
-* PLACEHOLDER
+* Used to get a specific category. Only admins can use PUT, PATCH and DELETE.
 
 <br>
 
@@ -94,9 +100,10 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 
 **Methods**:
   * GET
+  * POST
 
 **Implementation**:
-* PLACEHOLDER
+* Used to get all comments or post a new comment. Only registered people can use POST.
 
 <br>
 
@@ -104,9 +111,12 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 
 **Methods**:
   * GET
+  * PUT
+  * PATCH
+  * DELETE
 
 **Implementation**:
-* PLACEHOLDER
+* Used to get a specific comment. Only the owner of a comment can use PUT, PATCH or DELETE.
 
 <br>
 
@@ -114,9 +124,10 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 
 **Methods**:
   * GET
+  * POST
 
 **Implementation**:
-* PLACEHOLDER
+* Used to get all followers who follow other users. Only registered people can use POST.
 
 <br>
 
@@ -124,9 +135,10 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 
 **Methods**:
   * GET
+  * DELETE
 
 **Implementation**:
-* PLACEHOLDER
+* Used to get a specific pair of followers and followed person. Only an owner can DELETE a follow.
 
 <br>
 
@@ -134,9 +146,10 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 
 **Methods**:
   * GET
+  * POST
 
 **Implementation**:
-* PLACEHOLDER
+* Used to get a list of the available hacks. Only registered people can use POST. Filters and queries can be applied.
 
 <br>
 
@@ -144,9 +157,12 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 
 **Methods**:
   * GET
+  * PUT
+  * PATCH
+  * DELETE
 
 **Implementation**:
-* PLACEHOLDER
+* Used to get a specific hack. Only the owner can use PUT, PATCH and DELETE.
 
 <br>
 
@@ -156,7 +172,7 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
   * GET
 
 **Implementation**:
-* PLACEHOLDER
+* Used to get a list of profiles.
 
 <br>
 
@@ -164,9 +180,11 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 
 **Methods**:
   * GET
+  * PUT
+  * PATCH
 
 **Implementation**:
-* PLACEHOLDER
+* Used to get a specific profile. Only the owner can use PUT and PATCH.
 
 <br>
 
@@ -174,9 +192,10 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 
 **Methods**:
   * GET
+  * POST
 
 **Implementation**:
-* PLACEHOLDER
+* Used to get a list of ratings. Only registered people can use POST. Rating the own hack is impossible.
 
 <br>
 
@@ -184,9 +203,12 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 
 **Methods**:
   * GET
+  * PUT
+  * PATCH
+  * DELETE
 
 **Implementation**:
-* PLACEHOLDER
+* Used to get a specific rating. Only the owner can use PUT, PATCH and DELETE.
 
 <br>
 
@@ -196,7 +218,7 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
   * POST
 
 **Implementation**:
-* PLACEHOLDER
+* Used to log into an account using the needed credentials for username and password.
 
 <br>
 
@@ -206,7 +228,7 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
   * POST
 
 **Implementation**:
-* PLACEHOLDER
+* Used to log a user out of their account.
 
 <br>
 
@@ -216,7 +238,7 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
   * POST
 
 **Implementation**:
-* PLACEHOLDER
+* Used to register a new account, using the provided credentials. A new profile is created automatically for each new user.
 
 <br>
 
@@ -286,10 +308,10 @@ The GitHub repository for the frontend can be found here: [Hack Collect React Ap
 ## DEPLOYMENT
 
 ## GitHub
-* PLACEHOLDER
+* xxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ## Heroku
-* PLACEHOLDER
+* xxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 ---
 
