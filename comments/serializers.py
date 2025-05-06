@@ -4,6 +4,11 @@ from .models import Comment
 
 
 class CommentSerializer(serializers.ModelSerializer):
+    """
+    Comment Serializer to return JSON data.
+    "get_is_owner" is used to determine if the user currently logged in
+    owns the comment.
+    """
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')

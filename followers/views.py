@@ -5,6 +5,9 @@ from .serializers import FollowerSerializer
 
 
 class FollowerList(generics.ListCreateAPIView):
+    """
+    Follow only allowed for registered users.
+    """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Follower.objects.all()
     serializer_class = FollowerSerializer

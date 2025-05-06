@@ -4,6 +4,10 @@ from .models import Follower
 
 
 class FollowerSerializer(serializers.ModelSerializer):
+    """
+    Return a list of followers. The username is used for
+    the owner and followed user.
+    """
     owner = serializers.ReadOnlyField(source='owner.username')
     followed_name = serializers.ReadOnlyField(source='followed.username')
 

@@ -5,6 +5,13 @@ from categories.serializers import CategorySerializer
 
 
 class HackSerializer(serializers.ModelSerializer):
+    """
+    Hack Serializer to return JSON data.
+    Profile image gotten from the profile itself is verified to
+    no exeed the given limits.
+    "is_owner" is used to determine if the current user is
+    the Hack's owner.
+    """
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
     rating_id = serializers.SerializerMethodField()
@@ -38,6 +45,8 @@ class HackSerializer(serializers.ModelSerializer):
     def get_is_owner(self, obj):
         request = self.context['request']
         return request.user == obj.owner
+
+    # Check if the Hack was rated
 
     def get_rating_id(self, obj):
         user = self.context['request'].user

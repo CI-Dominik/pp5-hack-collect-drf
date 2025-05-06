@@ -4,6 +4,13 @@ from followers.models import Follower
 
 
 class ProfileSerializer(serializers.ModelSerializer):
+    """
+    Serializer to return profiles as JSON.
+    "is_owner" is used to determine if the person logged in is
+    the owner of the profile.
+    "followind_id" returns the information if the user
+    already follows.
+    """
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
     following_id = serializers.SerializerMethodField()

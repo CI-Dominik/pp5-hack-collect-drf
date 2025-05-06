@@ -9,6 +9,13 @@ from django.db.models import FloatField
 
 
 class HackList(generics.ListCreateAPIView):
+    """
+    View to return the Hacks. Only available for logged in users.
+    The average_rating and comments_count gets added via annotate
+    to display it in the frontend.
+    Filters for rated content, following and category can be applied.
+    Search is possible for the username and title.
+    """
     serializer_class = HackSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Hack.objects.all().annotate(

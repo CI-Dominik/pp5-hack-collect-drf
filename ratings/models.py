@@ -4,6 +4,11 @@ from hacks.models import Hack
 
 
 class Rating(models.Model):
+    """
+    Hack model with relation to an owner. The owner is the user
+    that left a rating. Only one rating per Hack can be left by
+    each user.
+    """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     hack = models.ForeignKey(
         Hack,

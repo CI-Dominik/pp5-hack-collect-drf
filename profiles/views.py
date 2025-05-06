@@ -7,6 +7,14 @@ from .serializers import ProfileSerializer
 
 
 class ProfileList(generics.ListAPIView):
+    """
+    "hacks_count" annotates the amount of Hacks a person has
+    posted so far.
+    "followers_count" annotates the amount of followers the
+    user has.
+    "following_count" annotates the amount of people the
+    user follows.
+    """
     queryset = Profile.objects.annotate(
         hacks_count=Count('owner__hack', distinct=True),
         followers_count=Count('owner__followed', distinct=True),

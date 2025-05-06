@@ -6,6 +6,10 @@ from .serializers import CommentSerializer, CommentDetailSerializer
 
 
 class CommentList(generics.ListCreateAPIView):
+    """
+    Returns a list of comments. A filter by Hack can be applied
+    to only display comments for a specific Hack.
+    """
     serializer_class = CommentSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Comment.objects.all()

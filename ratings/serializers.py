@@ -3,6 +3,10 @@ from .models import Rating
 
 
 class RatingSerializer(serializers.ModelSerializer):
+    """
+    Checks if a rating was already left by the current user.
+    If not, a new one is created.
+    """
     owner = serializers.ReadOnlyField(source='owner.username')
 
     class Meta:

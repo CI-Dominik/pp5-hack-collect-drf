@@ -6,6 +6,9 @@ from .serializers import CategorySerializer
 
 
 class ReadOnlyOrAdmin(BasePermission):
+    """"
+    Permission only for admin users.
+    """
     def has_permission(self, request, view):
         if request.method in SAFE_METHODS:
             return True
@@ -13,6 +16,9 @@ class ReadOnlyOrAdmin(BasePermission):
 
 
 class CategoryListCreateView(generics.ListCreateAPIView):
+    """
+    Category view, GET for everyone, POST for admins.
+    """
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
     permission_classes = [ReadOnlyOrAdmin]
@@ -22,6 +28,9 @@ class CategoryListCreateView(generics.ListCreateAPIView):
 
 
 class CategoryRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    """
+    View to update or delete a category. Only for admin users.
+    """
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
     lookup_field = 'pk'

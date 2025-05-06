@@ -8,6 +8,10 @@ from rest_framework.exceptions import PermissionDenied
 
 
 class RatingListCreateView(generics.ListCreateAPIView):
+    """
+    Check if the person liked their own hack or if the
+    person is logged out.
+    """
     queryset = Rating.objects.all()
     serializer_class = RatingSerializer
     permission_classes = [IsAuthenticatedOrReadOnly]

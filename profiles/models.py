@@ -4,6 +4,10 @@ from django.contrib.auth.models import User
 
 
 class Profile(models.Model):
+    """
+    Profile model for usage with each user. A new profile gets
+    created for every user that registers an account.
+    """
     owner = models.OneToOneField(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=40, blank=True)
     content = models.TextField(blank=True, max_length=255)
