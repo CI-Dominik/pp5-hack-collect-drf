@@ -5,7 +5,7 @@ class Category(models.Model):
     """
     Category model for use in the Hack page.
     """
-    name = models.CharField(max_length=50)
+    name = models.CharField(max_length=50, unique=True)
     description = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
