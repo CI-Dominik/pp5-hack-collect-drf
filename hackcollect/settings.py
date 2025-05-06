@@ -185,6 +185,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Registration Serializer
+
+REST_AUTH_REGISTER_SERIALIZERS = {
+    'REGISTER_SERIALIZER': 'hackcollect.serializers.CustomRegisterSerializer',
+}
+
 # Internationalization
 
 LANGUAGE_CODE = 'en-us'
