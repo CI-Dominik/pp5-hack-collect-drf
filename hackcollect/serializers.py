@@ -29,13 +29,6 @@ class CustomRegisterSerializer(RegisterSerializer):
     Validation for the username when registering.
     """
 
-    def validate_username(self, value):
-        if len(value) > 15:
-            raise serializers.ValidationError(
-                "Username must be at most 15 characters long."
-                )
-        return value
-
     def get_cleaned_data(self):
         # Get all data for cleaned registration
         data = super().get_cleaned_data()
