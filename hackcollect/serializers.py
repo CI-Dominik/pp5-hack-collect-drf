@@ -1,6 +1,7 @@
 from dj_rest_auth.serializers import UserDetailsSerializer
 from dj_rest_auth.registration.serializers import RegisterSerializer
 from rest_framework import serializers
+from django.core.validators import MaxLengthValidator
 
 
 class CurrentUserSerializer(UserDetailsSerializer):
@@ -28,6 +29,12 @@ class CustomRegisterSerializer(RegisterSerializer):
     """
     Validation for the username when registering.
     """
+
+    username = serializers.CharField(
+        max_length=15,
+        validators=[MaxLengthValidator(15)],
+        required=True,
+    )
 
     def get_cleaned_data(self):
         # Get all data for cleaned registration
