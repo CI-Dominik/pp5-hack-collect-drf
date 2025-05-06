@@ -10,3 +10,10 @@ class CurrentUserSerializer(UserDetailsSerializer):
         fields = UserDetailsSerializer.Meta.fields + (
             'profile_id', 'profile_image', 'is_staff'
         )
+
+    def validate_username(self, value):
+        if len(value) > 15:
+            raise serializers.ValidationError(
+                "Username must be at most 15 characters long."
+                )
+        return value
