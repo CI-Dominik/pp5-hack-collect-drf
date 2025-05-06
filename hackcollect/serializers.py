@@ -37,6 +37,14 @@ class CustomRegisterSerializer(RegisterSerializer):
         return value
 
     def get_cleaned_data(self):
+        # Get all data for cleaned registration
         data = super().get_cleaned_data()
+
+        # Ensure the fields are present in the cleaned data
         data['username'] = self.validated_data.get('username', '')
+        data['email'] = self.validated_data.get('email', '')
+        data['password1'] = self.validated_data.get('password1', '')
+        data['password2'] = self.validated_data.get('password2', '')
+        data['first_name'] = self.validated_data.get('first_name', '')
+        data['last_name'] = self.validated_data.get('last_name', '')
         return data
