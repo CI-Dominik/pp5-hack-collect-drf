@@ -17,11 +17,6 @@ class ProfileSerializer(serializers.ModelSerializer):
     hacks_count = serializers.ReadOnlyField()
     followers_count = serializers.ReadOnlyField()
     following_count = serializers.ReadOnlyField()
-    username = serializers.CharField(
-        source='owner.username',
-        max_length=15,
-        required=True
-        )
 
     # Validate image size and dimensions
 
