@@ -58,7 +58,7 @@ The only commits I made with CI-Dominik were for a GitHub board that I later rep
 ---
 
 ## **AGILE PLANNING**
-* Here, a list of Epics the backend was part of is displayed. A full list of the implemented features can be found in the [frontend's readme file](https://github.com/CI-Dominik/pp5-hack-collect/blob/main/README.md)
+* Here, a list of Epics the backend was part of is displayed. A full list of the implemented features can be found in the [frontend's readme file](https://github.com/CI-Dominik/pp5-hack-collect/blob/main/README.md#agile-planning)
 
 ## Epics
 * Authentication System
