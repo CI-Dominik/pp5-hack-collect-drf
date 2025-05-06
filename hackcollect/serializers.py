@@ -35,3 +35,8 @@ class CustomRegisterSerializer(RegisterSerializer):
                 "Username must be at most 15 characters long."
                 )
         return value
+
+    def get_cleaned_data(self):
+        data = super().get_cleaned_data()
+        data['username'] = self.validated_data.get('username', '')
+        return data
