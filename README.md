@@ -3,6 +3,14 @@ This is the API of Hack Collect. A React app used to post and rate Life Hacks. T
 
 The GitHub repository for the frontend can be found here: [Hack Collect React App](https://github.com/CI-Dominik/pp5-hack-collect)
 
+## **IMPORTANT NOTE**
+This project was only edited by me, CI-Dominik. While logging into my GitHub account with the Bash console in Visual Studio Code, I used these commands with my private email address by habit.
+
+`git config --global user.name "Dominik Wulf"`<br>
+`git config --global user.email "My private email address"`<br>
+<br>
+The only commits I made with CI-Dominik were for a GitHub board that I later replaced with my Trello board.
+
 ## **TABLE OF CONTENTS**
 
 [**DEVELOPMENT GOAL**](#development-goal)
