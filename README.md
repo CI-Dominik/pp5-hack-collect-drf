@@ -10,7 +10,7 @@ This project was only edited by me, CI-Dominik. While logging into my GitHub acc
 `git config --global user.name "Dominik Wulf"`<br>
 `git config --global user.email "My private email address"`<br>
 <br>
-The only commits I made with CI-Dominik were for a GitHub board that I later replaced with my Trello board.
+Because of this, my private account that I wanted to use for other projects in the future was used, DominikW89. The only commits I made with CI-Dominik were for a GitHub board that I later replaced with my Trello board.
 
 ## **TABLE OF CONTENTS**
 
@@ -284,7 +284,8 @@ The only commits I made with CI-Dominik were for a GitHub board that I later rep
 ---
 
 ## **TESTING**
-* All endpoints were tested for their correct JSON response. In-depth testing can be viewed in the [frontend's testing file](https://github.com/CI-Dominik/pp5-hack-collect/blob/main/TESTING.md).
+All endpoints were tested for their correct JSON response. The results can be found in the [testing file](TESTING.md).<br>
+In-depth testing for the frontend can be viewed in the [corresponding testing file](https://github.com/CI-Dominik/pp5-hack-collect/blob/main/TESTING.md).
 
 ## Flake8 testing
 * Every folder was checked using the Flake8 checker. Only files that were automatically created via `python makemigrations` or not altered by me (admin.py, tests.py) threw errors. Those do not impact the usability of the API in any way and were just too long lines or unused imports.
