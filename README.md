@@ -53,12 +53,12 @@ Because of this, my private account that I wanted to use for other projects in t
 ---
 
 ## **DEVELOPMENT GOAL**
-* The goal of the Hack Collect API is to provide all kinds of information for the frontend. With this, people can login, logout, use hacks, comments, follows and profiles to view, update and delete their data.
+Develop a robust and scalable REST API using Django Rest Framework (DRF) to support a Life Hacks platform. The API should allow users to view and interact with a variety of user-generated content, including life hacks, user profiles, follower relationships, comments, star ratings, and categories. The system must be designed with performance and security in mind, ensuring smooth user experiences while providing clear and structured access to the platform’s data.
 
 ---
 
 ## **AGILE PLANNING**
-* Here, a list of Epics the backend was part of is displayed. A full list of the implemented features can be found in the [frontend's readme file](https://github.com/CI-Dominik/pp5-hack-collect/blob/main/README.md#agile-planning)
+Here, a list of Epics the backend was part of is displayed. A full list of the implemented features can be found in the [frontend's README file](https://github.com/CI-Dominik/pp5-hack-collect/blob/main/README.md#agile-planning)
 
 ## Epics
 * Authentication System
@@ -267,7 +267,7 @@ Because of this, my private account that I wanted to use for other projects in t
 * Python was used as a programming language for editing backend code.
 
 ### Django REST Framework
-* Django REST Framework was used as a to manage views, URLs, models and serializers.
+* Django REST Framework was used to manage views, URLs, models and serializers.
 
 ### Cloudinary
 * Cloudinary was used to store the image files uploaded by users.
@@ -288,7 +288,7 @@ All endpoints were tested for their correct JSON response. The results can be fo
 In-depth testing for the frontend can be viewed in the [corresponding testing file](https://github.com/CI-Dominik/pp5-hack-collect/blob/main/TESTING.md).
 
 ## Flake8 testing
-* Every folder was checked using the Flake8 checker. Only files that were automatically created via `python makemigrations` or not altered by me (admin.py, tests.py) threw errors. Those do not impact the usability of the API in any way and were just too long lines or unused imports.
+* Every folder was checked using the Flake8 checker. Only files that were automatically created via `python makemigrations` or not altered by me (admin.py, tests.py) threw errors. Those do not impact the usability of the API in any way, and were just too long lines or unused imports.
 
 ### Categories
 
@@ -351,14 +351,14 @@ In-depth testing for the frontend can be viewed in the [corresponding testing fi
 <br>
 
 ### Config Vars
-* To keep your information private, head to the settings page and scroll down to config vars. Here, you can enter important and private information like the database url, the secret key and more.
+* To keep your information private, head to the settings page and scroll down to config vars. Here, you can enter important and private information like the database URL, the secret key and more.
 
 ![Screenshot of Heroku deployment](docs/deployment/heroku/03_config.jpg)
 
 <br>
 
 ### GitHub connection
-* Once your config vars are setup, click on the deploy page. There, you need to connect your current GitHub project to your Heroku account. Enter the name and link it.
+* Once your config vars are set up, click on the Deploy page. There, you need to connect your current GitHub project to your Heroku account. Enter the name and link it.
 
 ![Screenshot of Heroku deployment](docs/deployment/heroku/04_github.jpg)
 
@@ -388,4 +388,4 @@ In-depth testing for the frontend can be viewed in the [corresponding testing fi
 * Used to generate HTML boilerplate code and code editing.
 
 ## Special thanks
-* A special thank you to my mentor Gareth McGirr who helped me along my journey and also to my best friend Frederic, who provided me with helpful insights and assisted me with many testing scenarios.
+* A special thank you to my mentor Gareth McGirr who helped me along my journey, and also to my best friend Frederic, who provided me with helpful insights and assisted me with many testing scenarios.
